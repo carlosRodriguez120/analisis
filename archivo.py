@@ -1,22 +1,27 @@
 import math
 
-# def f(x):
-#     funcion=2*(x**2)+5*(x)-20
-#     return funcion
+def fun(x):
+    funcion=math.pi*(x**2)*((9-x)/(3))-30
+    return funcion
 
 
-# inicio =  2.15036
-# fin = 2.15037
-# suma = 0.000001
 
-# lista = []
-# while inicio<=fin:
-#     valor = f(inicio)
-#     lista.append(valor)
-#     print(F"EN {inicio} el valor fue de {f(inicio)}")
-#     inicio+=suma
 
-# print(lista)
+def funcionGrafica():
+    inicio = 1
+    fin = 10
+    suma = 1
+    lista = []
+    while inicio<=fin:
+        valor = fun(inicio)
+        lista.append(valor)
+        print(F"EN {inicio} el valor fue de {fun(inicio)}")
+        inicio+=suma
+
+  
+    print(lista)
+    return lista
+
 
 
 
@@ -30,17 +35,20 @@ si es menor a la tolerancia , se detiene
 # lista1=[1,2,3,4,4,5,5]
 # print(lista1[-1])
 
-
+def raiz_cubica(numero):
+    return numero**(1. / 3.)
 
 
 def f(x):
-    funcion=(20)/(2*x-5)
+    funcion=raiz_cubica((90-9*math.pi*x**2)/(-math.pi))
     return funcion
 
-def funcion(n):
+
+
+def funcionPuntoFijo(n):
     suma = 1
     lista=[0]
-    tolerancia = 0.0001
+    tolerancia = 0.00001
     while tolerancia<=suma:
         resultado = f(n)
         lista.append(resultado)
@@ -53,7 +61,9 @@ def funcion(n):
         print(f"---[{n}]---")
 
     return lista
-print(funcion(10))
+
+print(funcionPuntoFijo(2.01))
+#funcionGrafica()
 
 
 
