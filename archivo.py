@@ -60,6 +60,6 @@ def funcionPuntoFijo(n):
 
 
 print("METODO PUNTO FIJO")
-print(funcionPuntoFijo(2.01))
+print(funcionPuntoFijo(1))
 print("METODO GRAFICO")
 funcionGrafica()
