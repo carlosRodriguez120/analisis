@@ -1,5 +1,6 @@
 import math
 
+
 def fun(x):
     funcion = math.pi*(x**2)*((9-x)/(3))-30
     return funcion
@@ -8,7 +9,11 @@ def fun(x):
 def funcionGrafica():
     inicio = 8.5
     fin = 8.7
+<<<<<<< HEAD
     suma = 0.01
+=======
+    suma = 0.001
+>>>>>>> 7e7c2bb9ebf0f6d429aa48116b97858f4e6211b8
     lista = []
     while inicio <= fin:
         valor = fun(inicio)
@@ -16,7 +21,11 @@ def funcionGrafica():
         print(F"EN {inicio} el valor fue de {fun(inicio)}")
         inicio += suma
 
+<<<<<<< HEAD
     print(lista)
+=======
+    #print(lista)
+>>>>>>> 7e7c2bb9ebf0f6d429aa48116b97858f4e6211b8
     return lista
 
 
@@ -50,13 +59,26 @@ def funcionPuntoFijo(n):
         suma = abs(lista[-2])-abs(lista[-1])
         suma = abs(suma)
         n = resultado
+<<<<<<< HEAD
         print(suma)
+=======
+        #print(suma)
+>>>>>>> 7e7c2bb9ebf0f6d429aa48116b97858f4e6211b8
 
     for n in lista:
         print(f"---[{n}]---")
 
+<<<<<<< HEAD
     return lista
 
 
 print(funcionPuntoFijo(10))
+=======
+    
+
+
+print("METODO PUNTO FIJO")
+print(funcionPuntoFijo(1))
+print("METODO GRAFICO")
+>>>>>>> 7e7c2bb9ebf0f6d429aa48116b97858f4e6211b8
 funcionGrafica()
