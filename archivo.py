@@ -7,9 +7,9 @@ def fun(x):
 
 
 def funcionGrafica():
-    inicio = 8.5
-    fin = 8.7
-    suma = 0.001
+    inicio = 2.01
+    fin = 2.03
+    suma = 0.0001
     lista = []
     while inicio <= fin:
         valor = fun(inicio)
@@ -28,8 +28,7 @@ luego el resultado de esa funcion es la misma variable para correr dicha funcion
 la tolerancia : se debe sumar el valor actual de la funcion con el anterior 
 si es menor a la tolerancia , se detiene
 """
-# lista1=[1,2,3,4,4,5,5]
-# print(lista1[-1])
+
 
 
 def raiz_cubica(numero):
@@ -37,14 +36,14 @@ def raiz_cubica(numero):
 
 
 def f(x):
-    funcion = raiz_cubica((90-9*math.pi*x**2)/(-math.pi))
+    funcion = math.sqrt((30)/(math.pi*(3-(x)/(3))))
     return funcion
 
 
 def funcionPuntoFijo(n):
     suma = 1
     lista = [0]
-    tolerancia = 0.00001
+    tolerancia = 0.00000001
     while tolerancia <= suma:
         resultado = f(n)
         lista.append(resultado)
@@ -60,6 +59,6 @@ def funcionPuntoFijo(n):
 
 
 print("METODO PUNTO FIJO")
-print(funcionPuntoFijo(2.01))
+print(funcionPuntoFijo(2))
 print("METODO GRAFICO")
 funcionGrafica()
