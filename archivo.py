@@ -1,34 +1,11 @@
 import math
 
 
-def fun(x):
-    funcion = math.pi*(x**2)*((9-x)/(3))-30
-    return funcion
+""""
 
-
-def funcionGrafica():
-    inicio = 2.01
-    fin = 2.03
-    suma = 0.0001
-    lista = []
-    while inicio <= fin:
-        valor = fun(inicio)
-        lista.append(valor)
-        print(F"EN {inicio} el valor fue de {fun(inicio)}")
-        inicio += suma
-
-    #print(lista)
-    return lista
-
-
+METODO  PUNTO FIJO
+_________________________________________________________________________________________________________________________________________
 """
-definir la funcion 
-luego se asigna un valor a la funcion
-luego el resultado de esa funcion es la misma variable para correr dicha funcion 
-la tolerancia : se debe sumar el valor actual de la funcion con el anterior 
-si es menor a la tolerancia , se detiene
-"""
-
 
 
 def raiz_cubica(numero):
@@ -36,29 +13,85 @@ def raiz_cubica(numero):
 
 
 def f(x):
-    funcion = math.sqrt((30)/(math.pi*(3-(x)/(3))))
+    funcion = math.sqrt(((-2.5*x)-4.5)/(-0.5))
     return funcion
 
 
 def funcionPuntoFijo(n):
     suma = 1
     lista = [0]
-    tolerancia = 0.00000001
+    tolerancia = 0.00001
     while tolerancia <= suma:
         resultado = f(n)
         lista.append(resultado)
         suma = abs(lista[-2])-abs(lista[-1])
         suma = abs(suma)
         n = resultado
-        #print(suma)
+        
 
     for n in lista:
         print(f"---[{n}]---")
 
+
+"""
+METODO DE BISECCION
+____________________________________________________________________________________________________________________________________________
+"""
+
+
+def biseccion(a, b):
+
+    tolerancia = 0.0001
+
+    while tolerancia < fun(a):
+        c = (a+b)/2
+        if fun(a)*fun(c) < 0:
+            b = c
+        elif fun(a)*fun(c) > 0:
+            a = c
+        print(f"A: [{a}]- B:[{b}]- C:[{c}]")
+
+
+"""
+METODO GRAFICO
+______________________________________________________________________________________________________________________________________
+"""
+
+
+def funcionGrafica():
+    inicio = 5
+    fin = 7
+    suma = 0.000001
+    lista = []
+    while inicio <= fin:
+        valor = fun(inicio)
+        lista.append(valor)
+        if fun(inicio)*fun(inicio+suma) < 0:
+            print(F"EN {inicio} el valor fue de {fun(inicio)}")
+        inicio += suma
+
     
+    return lista
 
 
-print("METODO PUNTO FIJO")
+"""
+________________________________________________________________________________________________________________________________________
+
+"""
+
+
+# _________________________________________________________________________________________________________________________________
+# FUNCION PARA METODO GRAFICO Y METODO DE BISECCION
+
+def fun(x):
+    funcion = (-0.5*(x**2))+(2.5*x)+4.5
+    return funcion
+# __________________________________________________________________________________________________________________________________
+
+
+print("\n METODO PUNTO FIJO")
 print(funcionPuntoFijo(2))
-print("METODO GRAFICO")
+print("\n METODO GRAFICO")
 funcionGrafica()
+print(" \n METODO BISECCION")
+biseccion(0, 10)
